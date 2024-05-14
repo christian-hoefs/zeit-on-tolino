@@ -7,7 +7,7 @@ from selenium.webdriver import Chrome, ChromeOptions
 from selenium.webdriver.firefox.webdriver import WebDriver
 
 DOWNLOAD_PATH = tempfile.TemporaryDirectory().name
-
+options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36")
 
 @dataclass
 class Delay:
