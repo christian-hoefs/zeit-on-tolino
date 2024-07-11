@@ -21,7 +21,7 @@ def get_webdriver(download_path: Union[Path, str] = DOWNLOAD_PATH) -> WebDriver:
     prefs = {"download.default_directory" : f"{download_path}/"}
     options.add_experimental_option("prefs",prefs)
     options.add_argument("--headless")
-    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.84 Safari/537.36")
+    options.add_argument("user-agent=Mozilla/5.0 (iPhone; CPU iPhone OS 17_5_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.5 Mobile/15E148 Safari/604.1")
     webdriver = Chrome(options=options)
     setattr(webdriver, "download_dir_path", str(download_path))
     return webdriver
