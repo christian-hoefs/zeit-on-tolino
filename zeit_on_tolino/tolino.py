@@ -119,7 +119,7 @@ def _upload(webdriver: WebDriver, file_path: Path, e_paper_title: str) -> None:
     screenshot_path = "screenshot.png"  # Pfad zum Speichern des Screenshots
     webdriver.save_screenshot(screenshot_path)  # Screenshot wird gespeichert
     log.info(f"Screenshot gespeichert: {screenshot_path}")
-    
+    return
     log.info("DEBUG Ende")
     # wait until logged in
     WebDriverWait(webdriver, Delay.large).until(
