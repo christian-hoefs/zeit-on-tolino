@@ -115,7 +115,9 @@ def element_exists(webdriver: WebDriver, by: str, value: str) -> bool:
 
 def _upload(webdriver: WebDriver, file_path: Path, e_paper_title: str) -> None:
     log.info("DEBUG Beginn")
-    log.info(webdriver.page_source)
+    # log.info(webdriver.page_source)
+    log.info(webdriver.execute_script("return navigator.userAgent;"))
+    
     screenshot_path = "screenshot.png"  # Pfad zum Speichern des Screenshots
     webdriver.save_screenshot(screenshot_path)  # Screenshot wird gespeichert
     log.info(f"Screenshot gespeichert: {screenshot_path}")
