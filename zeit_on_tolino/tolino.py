@@ -114,6 +114,9 @@ def element_exists(webdriver: WebDriver, by: str, value: str) -> bool:
 
 
 def _upload(webdriver: WebDriver, file_path: Path, e_paper_title: str) -> None:
+    log.info("DEBUG Beginn")
+    log.info(webdriver.page_source)
+    log.info("DEBUG Ende")
     # wait until logged in
     WebDriverWait(webdriver, Delay.large).until(
         EC.presence_of_element_located((By.CSS_SELECTOR, 'span[data-test-id="library-drawer-labelLoggedIn"]'))
