@@ -46,8 +46,8 @@ jobs:
         TOLINO_PARTNER_SHOP: ${{ secrets.TOLINO_PARTNER_SHOP }}
       run: poetry run python sync.py
 
-      - name: Upload Screenshot
-        uses: actions/upload-artifact@v3
-        with:
-          name: screenshot
-          path: screenshot.png
+    - name: Upload Screenshot
+      uses: actions/upload-artifact@v3
+      with:
+        name: screenshot
+        path: screenshot.png
